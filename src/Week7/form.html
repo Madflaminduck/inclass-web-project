@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Items in Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid black;
+        }
+        .navbar .header {
+            padding: 10px 20px;
+            font-weight: bold; /* Make the header bold */
+        }
+        .navbar .data-items {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1;
+        }
+        .navbar .data-items .item {
+            padding: 10px 5px;
+            color: blue; /* Make the font color of data items blue */
+        }
+        .navbar .data-items .item:nth-child(4) {
+            border-bottom: 2px solid black; /* Bottom border for the 4th data cell */
+        }
+        .navbar .data-items .left-items {
+            display: flex;
+            flex: 1;
+        }
+        .navbar .data-items .right-items {
+            display: flex;
+        }
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+        .left-column {
+            width: 20%; /* Set the width of the left column to 20% */
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid black;
+            border-radius: 10px; /* Rounded edges for columns */
+        }
+        .right-column {
+            width: 40%; /* Set the width of the right column to 40% */
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid black;
+            border-radius: 10px; /* Rounded edges for columns */
+        }
+        .left-column ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .left-column ul li {
+            margin: 5px 0;
+        }
+        .left-column ul li a {
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="header">Table Header</div>
+        <div class="data-items">
+            <div class="left-items">
+                <div class="item">Data Item 1</div>
+                <div class="item">Data Item 2</div>
+                <div class="item">Data Item 3</div>
+                <div class="item">Data Item 4</div>
+            </div>
+            <div class="right-items">
+                <div class="item">Data Item 5</div>
+                <div class="item">Data Item 6</div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left-column">
+            <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+                <li><a href="#">Item 4</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Item 5</a></li>
+                <li><a href="#">Item 6</a></li>
+                <li><a href="#">Item 7</a></li>
+                <li><a href="#">Item 8</a></li>
+            </ul>
+        </div>
+        <div class="right-column">
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br><br>
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

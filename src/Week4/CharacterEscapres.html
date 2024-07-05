@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 example</title>
+
+    <style>
+        .img-responsive {
+            width: 100%;
+            /*Max width is the maximimum allowable amount that the image can increase if viewed on a bigger/smaller monitor. */
+            max-width: 2000px;
+        }
+
+        .container {
+            /*Container takes up 60% of the width of the page. So, the margins is automatically set to 40%, with 20% on both sides */
+            width: 60%;
+            /*Remember, in margins, first is height distance, second is width */
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 100px;
+        }
+        /*Since the table is inside the div, it'll take up 100% of the width of the div. */
+        .table-responsive {
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            border: 1px solid orange;
+            border-collapse: collapse;
+            margin: 10px 0;
+            background-color: azure;
+        }
+        /* Style targets both th and td elements, specifically in the table class*/
+        .table-responsive th, .table-responsive td {
+            border: 1px solid orange;
+            /*Doing paddings with only one number does height and width */
+            padding: 5px;
+        }
+
+        .table-responsive th {
+            border-bottom: 3px solid orange;
+        }
+
+        .table-responsive tbody tr:nth-child(odd) {
+            background-color: beige;
+        }
+
+        .table-responsive tfoot {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+            width="100px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+                d="M272 96c-78.6 0-145.1 51.5-167.7 122.5c33.6-17 71.5-26.5 111.7-26.5h88c8.8 0 16 7.2 16 16s-7.2 16-16 16H288 216s0 0 0 0c-16.6 0-32.7 1.9-48.3 5.4c-25.9 5.9-49.9 16.4-71.4 30.7c0 0 0 0 0 0C38.3 298.8 0 364.9 0 440v16c0 13.3 10.7 24 24 24s24-10.7 24-24V440c0-48.7 20.7-92.5 53.8-123.2C121.6 392.3 190.3 448 272 448l1 0c132.1-.7 239-130.9 239-291.4c0-42.6-7.5-83.1-21.1-119.6c-2.6-6.9-12.7-6.6-16.2-.1C455.9 72.1 418.7 96 376 96L272 96z" />
+        </svg>
+
+        <!--Creating Tables-->
+        <!--<table> creates a table container.
+            <tr> is table row, <td> is table collumn data, YOU MUST HAVE EQUAL AMOUNT OF <TD> IN ALL ROWS OR IT WILL NOT WORK> 
+                <thead> is the table header, -->
+        <table class="table-responsive">
+            <caption> This is a caption!</caption>
+            <thead>
+                <th>H1</th>
+                <th>H2</th>
+                <th>H3</th>
+                <th>H4</th>
+                <th>H5</th>
+            </thead>
+            <tr>
+                <td>A1</td>
+                <td>A2</td>
+                <td>A3</td>
+                <td colspan="2" rowspan="2">A4 A5, B4 and B5</td>
+            </tr>
+            <tr>
+                <!-- Merging cell together using colspan-->
+                <td colspan="2">B1 and B2</td>
+                <td>B3</td>
+            </tr>
+            <tr>
+                <!-- Merging rows together using colspan-->
+                <td rowspan="2">C1 and D1</td>
+                <td>C2</td>
+                <td colspan="3">C3 and C4 and C5</td>
+            </tr>
+            <tr>
+                <td>D2</td>
+                <td>D3</td>
+                <td>D4</td>
+                <td>D5</td>
+            </tr>
+            <tfoot>
+                <td>F1</td>
+                <td>F2</td>
+                <td>F3</td>
+                <td>F4</td>
+                <td>F5</td>
+            </tfoot>
+        </table>
+
+
+        <h1>Natural Arches</h1>
+        <img src="pillars.png" alt="Picture of pillars" class="img-responsive">
+        <a href="#"> <img src="leaf-solid.svg" class="logo"> </a>
+        <img src="leaf-solid.svg" alt="logo" class="logo">
+        <h2>Same image, but with a link</h2>
+        <img src="https://plus.unsplash.com/premium_photo-1701172277135-11672e183ab1?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Picture of pillars" class="img-responsive">
+    </div>
+</body>
+
+</html>

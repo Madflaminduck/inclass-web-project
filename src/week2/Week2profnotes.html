@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="a description of what the page is all about...">
+
+  <title>Week 01 - A simple soccer page</title>
+  <style>
+    /* This is internal CSS */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: azure;
+      margin: 0 20%;
+    }
+
+    h1 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>
+    <img style="width: 150px; height: 150px;" src="data:image/png;base64,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" alt="A soccer ball"><br/>
+    Soccer (Association Football)
+  </h1>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam aut sed voluptatum dicta a ipsum quae placeat impedit! Placeat, veniam. Repellendus assumenda soluta culpa dolorem corrupti vero amet autem vitae?
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis tempora maiores repellendus debitis pariatur inventore numquam quod id adipisci, in corrupti assumenda quibusdam, cum rerum ratione mollitia accusamus ex non.
+    Consectetur velit illum incidunt officia cumque rem, sequi consequuntur voluptate non! Nesciunt earum illo veritatis numquam! Magnam, eligendi tempora hic, sed ad consequuntur, quidem deleniti explicabo magni aliquid adipisci. Mollitia?
+  </p>
+  <h2>
+    Terminalogy
+  </h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam iste accusamus magni omnis pariatur molestiae quam praesentium tenetur, animi sapiente autem enim quae sed recusandae culpa accusantium reiciendis, totam optio.
+    Voluptatum facere beatae aperiam quisquam praesentium. In, necessitatibus. Error velit necessitatibus eaque accusantium quasi, quod enim quaerat nihil voluptate tempora expedita quam fugiat ex et debitis aperiam rem impedit possimus.
+    Perferendis officiis nobis ex aut molestias nesciunt ipsa ducimus aliquid veritatis, inventore accusamus molestiae tenetur beatae placeat, tempore deserunt sunt quisquam magni maiores debitis. Similique quaerat voluptate repellendus eligendi dicta.
+  </p>
+
+  <h2>
+    History
+  </h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dolore commodi aliquid magnam nemo ipsam esse officiis dolores dicta, vero omnis beatae ratione debitis tempore consequuntur nobis quaerat, saepe recusandae!</p>
+  <h3>1850s-1930s</h3>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus soluta consequuntur numquam quod provident modi ipsum, esse totam, molestias nulla magni dolores quia vitae ratione ut nam. Voluptatibus, maiores.</p>
+  <h3>1931-present</h3>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam commodi mollitia saepe nam nihil ut officia? Non, molestiae, sint, quisquam fuga possimus amet explicabo quibusdam officiis facilis nesciunt autem itaque?</p>
+  
+  <div>&copy; All rights reserved</div>
+</body>
+
+</html>

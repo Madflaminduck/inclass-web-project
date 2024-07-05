@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            box-sizing: border-box
+        }
+
+        *, ::after, ::before{
+            box-sizing: inherit;
+        }
+
+        header {
+            font-size: 2rem;
+            padding: 0 1rem;
+            height: 100px;
+            line-height: 100px;
+            background-color: darkgray;
+        }
+
+        footer {
+            font-size: 1.5rem;
+            text-align: center;
+            height: 60px;
+            line-height: 60px;
+            background-color: lightgray;
+        }
+
+        body {
+            margin: 0;
+        }
+        .use-flex #main-container {
+            display: flex;
+            flex-flow: row nowrap;
+            width: 100vw;
+        }
+        .use-float #main-container {
+            display: table;
+            width: 100vw;
+            height: calc(100vh - 160px);
+        }
+
+        #aside-col {
+            display: none;
+        }
+
+
+        .use-flex #main-col {
+            flex: 1;
+            background-color: yellowgreen;
+        }
+        .use-float #main-col {
+            display: table-cell;
+            background-color: yellowgreen;
+        }
+
+        #main-container .box {
+            height: 100px;
+            line-height: 100px;
+            background-color: blue;
+            text-align: center;
+            color: white;
+            margin: 1rem 1rem 0 1rem;
+        }
+
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        #main-container [selected] {
+            color: darkblue;
+            background-color: lightblue;
+        }
+
+        #main-col [type="featured"] {
+            border: 3px solid white;
+            background-color: black;
+        }
+
+        /* Medium devices*/
+        @media all and (min-width: 600px) {
+            .use-flex #main-col .boxes {
+                display: flex;
+                flex-flow: row wrap;
+            }
+            .use-flex #main-col .box {
+                margin: 1rem 0 0 1rem;
+                width: calc((100% - 3rem) / 2);
+            }
+
+            .use-float #main-col .box {
+                float: left;
+                margin: 1rem 0 0 1rem;
+                width: calc((100% - 3rem) / 2);
+            }
+        }
+
+        /* Large devices*/
+        @media all and (min-width: 800px) {
+            .use-flex #main-col {
+                flex: 7;
+            }
+            .use-float #main-col {
+                width: 70%;
+            }
+
+            .use-flex #main-container .boxes {
+            display: flex;
+            flex-flow: row wrap;
+            }
+            .use-flex #main-container .box {
+                margin: 1rem 0 0 1rem;
+            }
+            .use-float #main-container .box {
+                float: left;
+                margin: 1rem 0 0 1rem;
+            }
+
+            .use-float #main-col .box, .use-flex #main-col .box {
+                width: calc((100% - 4rem) / 3);
+            }
+
+            .use-float #aside-col {
+                display: table-cell;
+                background-color: lightblue;
+                vertical-align: top;
+            }
+
+            .use-flex #aside-col {
+                display: block;
+                flex: 3;
+                background-color: lightblue;
+                
+            }
+
+            .use-float #aside-col .boxes {
+                display: flex;
+                flex-flow: row wrap;
+            }
+            .use-float #aside-col .box, .use-flex #aside-col .box {
+                width: calc((100% - 3rem) / 2);
+            }
+
+            ul.links {
+                list-style: none;
+                padding: 1rem;
+            }
+
+            ul.links li {
+                color: black;
+                padding: .5rem;
+                background-color: gray;
+                margin-bottom: .3rem;
+                text-align: center;
+            }
+
+            ul.links > li > a {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            ul.links > li > a:link {
+                color: white;
+            }
+
+            ul.links > li > a:visited {
+                color: darkgray;
+            }
+            ul.links > li > a:active {
+                color: orange;
+            }
+            ul.links > li:hover {
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+
+<body class="use-float">
+    <header>Header</header>
+    <div class="container" id="main-container">
+        <div id="main-col">
+            <div class="boxes clearfix">
+                <div class="box" type="featured">Featured</div>
+                <div class="box">Box 2</div>
+                <div class="box">Box 3</div>
+                <div class="box">Box 4</div>
+                <div class="box">Box 5</div>
+                <div class="box" selected>Selected</div>
+                <div class="box">Box 7</div>
+                <div class="box">Box 8</div>
+                <div class="box">Box 9</div>
+            </div>
+        </div>
+        <div id="aside-col">
+            <div class="boxes clearfix">
+                <div class="box">Box 1</div>
+                <div class="box">Box 2</div>
+                <div class="box">Box 3</div>
+                <div class="box">Box 4</div>
+                <div class="box">Box 5</div>
+                <div class="box">Box 6</div>
+            </div>
+
+            <ul class="links">
+                <li><a href="#link_1">Link 1</a></li>
+                <li><a href="#link_2">Link 2</a></li>
+                <li><a href="#link_3">Link 3</a></li>
+                <li><a href="#link_4">Link 4</a></li>
+                <li><a href="#link_5">Link 5</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>&copy;All rights reserved</footer>
+</body>
+
+</html>

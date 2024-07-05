@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="Assignment 2 template page">
+    <title>Thoughtful</title>
+    <style>
+        body {
+            margin: auto;
+        }
+    
+        h1 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 70px;
+        }
+    
+        header {
+            text-align: center;
+        }
+    
+        nav {
+            text-align: center;
+            /* Center text inside the section */
+    
+        }
+    
+        nav li {
+            display: inline;
+            margin: 0 10px;
+            /* Adds some space between the list items */
+        }
+    
+        nav ol {
+            list-style-type: none;
+        }
+    
+        section {
+            display: inline-block;
+        }
+    
+        #single {
+            margin-right: 25%;
+            padding-right: 10px;
+            /* Space between text and the right border */
+            border-right: 2px solid black;
+            /* Visible right border */
+            margin-bottom: 30px;
+    
+        }
+    
+        #list {
+            margin-left: 25%;
+            padding-left: 10px;
+            /* Space between text and the right border */
+            border-left: 2px solid black;
+            /* Visible right border */
+            margin-bottom: 30px;
+        }
+    
+        #blockquotes {
+            margin-right: 25%;
+            padding-right: 10px;
+            /* Space between text and the right border */
+            border-right: 2px solid black;
+            /* Visible right border */
+            margin-bottom: 30px;
+        }
+        footer {
+            text-align: center;
+        }
+        span {
+            color: gray;
+        }
+        pre {
+            color: gray;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <header>
+
+        <h3>BE THOUGHTFUL</h3>
+    </header>
+    <nav>
+        <hr>
+        <ol>
+            <li><a href="fakeemail@example.com">Home</a></li>
+            <li><a href="fakeemail@example.com">Featured</a></li>
+            <li><a href="fakeemail@example.com">Archive</a></li>
+            <li><a href="fakeemail@example.com">FAQ</a></li>
+            <li><a href="fakeemail@example.com">Contact</a></li>
+        </ol>
+        <hr>
+        <h1>BELIEVE THE POWER OF YOUR OWN THOUGHTS</h1>
+    </nav>
+    <section id="single">
+        <h2>Using a single paragraph</h2>
+        <p>By <span>Mark Smith &lpar;</span><a href="fakeemail@example.com">msmith@example.com</a>&rpar; on<span> 14
+                May 2020</span></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum</p>
+    </section>
+    <section id="list">
+        <h2>Nesting Lists of different kinds!</h2>
+        <p>By <span>Adam Smith &lpar;</span><a href="fakeemail@example.com">asmith@example.com</a>&rpar; on<span> 14 May 2020</span></p>
+        Start with an unordered list!
+        <ul>
+            <li>Here is the first item by itself</li>
+            <li>Here is a list with nested ordered list
+                <ol>
+                    <li>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</li>
+                    <li>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id</li>
+                    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</li>
+                </ol>
+            </li>
+            <li>Another list item by itself</li>
+            <li>An item list with a nested desciption list
+                <dl>
+                    <dt>Dream</dt>
+                    <dd>Duis aute irure dolor in reprehenderit in voluptate</dd>
+                    <dt>Ideas</dt>
+                    <dd>Duis aute irure dolor in reprehenderit in voluptate</dd>
+                    <dt>Thoughts</dt>
+                    <dd>Duis aute irure dolor in reprehenderit in voluptate</dd>
+                </dl>
+            </li>
+        </ul>
+    </section>
+
+    <section id="blockquotes">
+        <h2>With Blockquotes and Code Blocks</h2>
+        <p>By <span>Jane Doe &lpar;</span><a href="fakeemail@example.com">jdoe@example.com</a>&rpar; on<span> 14
+                May 2020</span></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.</p>
+        <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+        </blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.</p>
+        <pre>   
+            let x, y, z;    //Declare 3 variables
+            x = 5;          //Assign the value 5 to x
+            y = 6;          //Assign the value 6 to y
+            z = x + y;      //Assign the sum of x and y to z
+
+            document.getElelemtnById("dd").innerHTML = "z = " + z;
+        </pre>
+    </section>
+    <hr>
+    <footer>
+    <div>&copy; All rights reserved &bull; 2024</div>
+    </footer>
+
+</body>
+
+
+
+</html>

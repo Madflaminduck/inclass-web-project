@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(245, 243, 243);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid black;
+        }
+
+        .navbar .header {
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+
+        .navbar .data-items {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1;
+        }
+
+        .navbar .data-items .item {
+            padding: 5px 5px;
+            color: blue;
+        }
+
+        .navbar .data-items .item:nth-child(4) {
+            border-bottom: 3px solid blue;
+        }
+
+        .navbar .data-items .left-items {
+            display: flex;
+            flex: 1;
+        }
+
+        .navbar .data-items .right-items {
+            display: flex;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+            margin: 20px;
+            gap: 20px;
+        }
+
+        .left-column {
+            width: 15%;
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid grey;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        .left-column ul {
+            list-style-type: none;
+            padding: 0;
+            margin-left: 20px;
+        }
+
+        .left-column ul li {
+            margin: 5px 0;
+        }
+
+        .left-column ul li a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        .right-column {
+            width: 40%;
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid grey;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        .title {
+            border-bottom: 2px solid blue;
+            margin-bottom: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: calc(100% - 20px);
+            margin: 10px 0px;
+            padding: 8px;
+        }
+
+        #name {
+            border: 1px solid grey;
+        }
+
+        #username {
+            border: 1px solid green;
+        }
+
+        #email {
+            border: 1px solid red;
+        }
+
+        #message {
+            height: 150px;
+        }
+
+        .member-options {
+            display: flex;
+            flex-direction: column;
+            margin: 10px 10px 20px 0px;
+        }
+
+
+        .member-options .gender-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .member-options div {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .member-options input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .terms {
+            display: flex;
+            align-items: center;
+            margin: .5rem 0;
+            
+        }
+
+        .terms a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 10px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: none;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .submit-button {
+            background-color: blue;
+            color: white;
+        }
+
+        .cancel-button {
+            background-color: lightgrey;
+            color: blue;
+        }
+
+        .footer {
+            background-color: black;
+            color: lightslategray;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+            flex-shrink: 0;
+            margin-top: auto;
+        }
+
+        .email-text {
+            color: red;
+            margin-top: 0;
+            margin-bottom: .5rem;
+        }
+
+        .username-text {
+            color: green;
+            margin-top: 0;
+            margin-bottom: .5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="header">Alexander Stapp</div>
+        <div class="data-items">
+            <div class="left-items">
+                <div class="item"><a href="#">Home</a></div>
+                <div class="item"><a href="#">Products</a></div>
+                <div class="item"><a href="#">Services</a></div>
+                <div class="item"><a href="#">Contact Us</a></div>
+            </div>
+            <div class="right-items">
+                <div class="item">Sign in</div>
+                <div class="item">Sign up</div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left-column">
+            <h2>Main menu</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+            <h2>Featured Projects</h2>
+            <ul>
+                <li><a href="#">Project A</a></li>
+                <li><a href="#">Project B</a></li>
+                <li><a href="#">Project C</a></li>
+                <li><a href="#">Project D</a></li>
+                <li><a href="#">Project E</a></li>
+                <li><a href="#">Project F</a></li>
+            </ul>
+        </div>
+        <div class="right-column">
+            <div class="title">
+                <h1>Contact Us Form</h1>
+            </div>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+                <p class="username-text">This Username is available</p>
+                <div class="member-options">
+                    <label class="member-label">Are you a member?</label>
+                    <div>
+                        <input type="radio" id="yes" name="member" value="yes">
+                        <label for="yes">Yes</label>
+                        <input type="radio" id="no" name="member" value="no">
+                        <label for="no">No</label>
+                    </div>
+                </div>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <p class="email-text">This email is invalid</p>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+                <div class="terms">
+                    <input type="checkbox" id="agree" name="agree">
+                    <label for="agree">I agree to the <a href="#">terms and conditions</a>.</label>
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="button submit-button">Submit</button>
+                    <button type="button" class="button cancel-button">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2021 - CS2350 - All rights reserved
+    </div>
+</body>
+
+</html>

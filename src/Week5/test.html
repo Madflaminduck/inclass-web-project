@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PracticeActivity5</title>
+
+    <style>
+        :root {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: inherit;
+        }
+
+        nav {
+            border-bottom: solid 2px lightgray;
+            width: 100%;
+            padding: 5px;
+        }
+
+        nav>p {
+            float: left;
+            margin: 0;
+            padding-right: 10px;
+            font-weight: bold;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            color: orange;
+            padding-left: 0;
+            margin-right: 15px;
+            float: left;
+        }
+
+        .pull-right {
+            float: right;
+        }
+
+        span {
+            color: rosybrown;
+        }
+
+        .wrap-example {
+            width: 80%;
+            margin: 3% auto;
+            /* Center the container horizontally */
+            padding: 0%;
+        }
+
+        img {
+            width: 35%;
+            float: left;
+            border: 1px solid black;
+            border-radius: 25px;
+            margin: 20px;
+            margin-left: 0;
+        }
+
+        h1 {
+            margin-left: 10%;
+            padding: 0%;
+        }
+
+        .wrap-example>p {
+            margin-right: 10%;
+            margin-left: 5%;
+            /* Add a left margin to position the content to the right of the image */
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        .vertical-example {
+            width: 80%;
+            margin: 3% auto;
+            /* Center the container horizontally */
+            padding: 0%;
+            /* Center content horizontally */
+            text-align: center;
+        }
+
+        .vcenter {
+            /* Remove display: flex */
+            width: 80%;
+            height: 20%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .circle {
+            /* Use inline-block to display circles side by side */
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            margin: 15px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            /* Center children vertically */
+            line-height: 200px;
+        }
+
+        .vcenter .circle {
+            line-height: 200px;
+        }
+
+        .wrap-example:after,
+        .vertical-example:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .col_section {
+            width: 80%;
+            margin: 3% auto;
+            padding: 0%;
+            overflow: hidden;
+            display: table;
+            table-layout: fixed;
+        }
+
+        .col {
+            padding: 10px;
+            display: table-cell;
+        }
+
+        footer {
+            border-top: 1px solid grey;
+            padding: 5px;
+        }
+        .left-text {
+            float: left;
+        }
+        .right-text {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="clearfix">
+        <p>Floated Menus:</p>
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+        </ul>
+        <ul class="pull-right">
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+    </nav>
+    <h1><span>&lt;Article 1&gt;:</span> Wrapping text around an image</h1>
+    <section class="wrap-example">
+        <img src="https://plus.unsplash.com/premium_photo-1697730172915-26165f42ffe9?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Picture of Canyon">
+        <h2> A secondary heading</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, nesciunt quasi fugit eum eveniet
+            maxime quis quaerat nemo! Quos sit et at alias suscipit minus similique cumque explicabo recusandae
+            quisquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nemo impedit exercitationem placeat
+            rem totam fuga rerum tempora amet repudiandae! A adipisci voluptatibus necessitatibus non, aliquam ratione
+            magnam ea quam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus sint voluptas voluptatem
+            amet voluptatibus tempora atque cumque voluptate natus eveniet, quibusdam, dicta assumenda rerum eum ad
+            laborum laudantium, hic nostrum! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima
+            perspiciatis distinctio fugiat sapiente mollitia impedit, quidem ullam in velit nisi vero inventore
+            voluptatem assumenda quasi veniam! Dolore cum id alias? Lorem ipsum dolor, sit amet consectetur adipisicing
+            elit. Repudiandae quisquam fugiat veniam voluptatum, corporis nemo pariatur quae consequatur omnis harum
+            consequuntur distinctio earum quia eaque magnam ab ad tenetur voluptate. Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Maxime doloribus ipsam dicta iste cumque velit nam laudantium enim ab, nostrum
+            unde sequi omnis maiores quas dolorem quod ea repudiandae ex!</p>
+    </section>
+    <h1><span>&lt;Article 2&gt;:</span> Centering Text vertically</h1>
+    <section class="vertical-example">
+        <div class="vcenter">
+            <div class="circle">Selectors</div>
+            <div class="circle">Inheritance</div>
+            <div class="circle">Cascade</div>
+            <div class="circle">Specificity</div>
+        </div>
+    </section>
+    <h1><span>&lt;Article 3&gt;:</span> Equal-height columns</h1>
+    <section class="col_section clearfix">
+        <div class="col" style=" width: 30%; background-color: gray; color: white;">Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Sapiente quibusdam, ipsa deserunt assumenda, aliquid minus commodi vero
+            accusantium repellendus animi quasi sint corporis consequatur atque dolores cum! Quasi, delectus ad?</div>
+        <div class="col" style="width: 40%; background-color: black; color: white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores repellendus eveniet
+            pariatur eius modi exercitationem harum. Veniam porro alias id. Rerum nemo ut provident laboriosam maxime
+            nihil quam earum harum? Lorem ipsum dolor sit amet consectetur adipisicing elit. In asperiores eos debitis mollitia et assumenda culpa tenetur aliquid id? Iure ab laudantium beatae iste architecto, quasi consequatur inventore. Maiores, accusantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nihil non ipsa veniam sunt. Consequuntur voluptas, harum totam quibusdam nesciunt fugiat, neque magnam a id ex recusandae molestias unde placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam repudiandae, iusto ut praesentium facilis nisi ex sapiente amet veritatis, consequatur doloremque. Alias voluptatum id sequi exercitationem, adipisci optio aperiam ut.</div>
+        <div class="col" style=" width: 30%; background-color: gray; color: white;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis iste eaque ab qui est
+            ullam officia possimus voluptate corporis minima nobis eius fugit atque nemo, nesciunt in explicabo
+            asperiores libero.</div>
+        <col>
+    </section>
+
+    <footer class="clearfix">
+        <div class="left-text"><strong>Alexander Stapp</strong></div>
+        <div class="right-text">&copy;All rights reserved</div>
+    </footer>
+</body>
+
+</html>

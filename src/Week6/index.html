@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Activity 5</title>
+
+    <style>
+        *,
+        ::after,
+        ::before {
+            box-sizing: inherit;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        :root {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .wrapper {
+            flex: 1;
+        }
+
+        .top-of-page {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            border-bottom: 2px solid darkgrey;
+        }
+
+        .top-of-page>h2 {
+            margin-left: 10px;
+        }
+
+        .top-of-page>.search-bar {
+            display: none;
+            background-color: rgb(230, 230, 236);
+            border-radius: 10px;
+            padding: 1rem 1rem;
+            text-align: center;
+            margin-right: 2%;
+            width: 20%;
+        }
+
+        .top-of-page>.search-bar>a {
+            color: gray;
+        }
+
+        .post {
+            margin-top: 1%;
+            padding: 10px;
+            box-sizing: border-box;
+            border-bottom: 1px solid darkgrey;
+        }
+
+        .post>h1,
+        .post>.info {
+            color: gray;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+        }
+
+        footer {
+            color: white;
+            background-color: grey;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        footer ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin-left: 15px;
+        }
+
+        footer ul li {
+            margin-right: 20px;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links {
+            display: none;
+        }
+
+        .copyright {
+            flex-grow: 1;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        nav {
+            display: none;
+        }
+
+        .button {
+            display: none;
+        }
+
+        /*Desktop View */
+        @media all and (min-width: 500px) {
+            .top-of-page {
+                border-bottom: none;
+            }
+
+            .top-of-page>.search-bar {
+                display: block;
+            }
+
+            nav {
+                background-color: rgb(230, 230, 236);
+                width: 100%;
+                color: orange;
+                padding: 10px 20px;
+                display: flex;
+                justify-content: center;
+            }
+
+            nav ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: flex;
+            }
+
+            nav li {
+                padding: 10px;
+
+            }
+
+            a {
+                text-decoration: none;
+                color: orange;
+            }
+
+            footer {
+                justify-content: space-between;
+            }
+
+            .footer-links {
+                display: flex;
+            }
+
+            .copyright {
+                margin-left: auto;
+                text-align: right;
+            }
+
+            .posts-container {
+                display: flex;
+                flex-direction: column;
+                width: 65%;
+            }
+
+            .post {
+                display: flex;
+                margin-bottom: 20px;
+                border-bottom: 2px solid darkgrey;
+                padding-bottom: 20px;
+                color: black;
+            }
+
+
+            .post .info, .post h1 {
+                color: gray;
+            }
+
+            .post img {
+                width: 30%;
+                margin-right: 20px;
+            }
+
+            .secondary-content>img {
+                border-radius: 0;
+            }
+
+            .post-content {
+                width: 70%;
+            }
+
+            .secondary-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 30%;
+                background-color: rgb(230, 230, 236);
+                border-radius: 10px;
+                padding: 20px;
+                margin-top: 2%;
+                margin-right: 3%;
+            }
+
+            .secondary-content h2{
+                color: gray;
+            }
+            .secondary-content>p {
+                padding-bottom: 100px;
+                color: black;
+            }
+
+            .main-content {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .button {
+                background-color: rgb(255, 136, 0);
+                color: white;
+                border: none;
+                border-radius: 10px;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="top-of-page">
+            <h2>Alexander Stapp</h2>
+            <div class="search-bar">
+                <a href="#">Type to search</a>
+            </div>
+        </section>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Recent Posts</a></li>
+                <li><a href="#">Old Posts</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="main-content">
+            <div class="posts-container">
+                <div class="post">
+                    <img src="https://images.unsplash.com/photo-1718086436850-ac77db40dadb?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Seaside Cliff">
+                    <div class="post-content">
+                        <h1>First post with Image</h1>
+                        <p class="info">By Adam Smith, Jan 1 2021</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit repellendus facere
+                            excepturi porro, odit debitis recusandae accusantium temporibus omnis esse expedita odio
+                            aspernatur molestias, suscipit minima officiis. Exercitationem, est rerum.</p>
+                        <a href="#">
+                            <div class="button">Take a Tour</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="post">
+                    <img src="https://images.unsplash.com/photo-1718009963338-0a58665968aa?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Desert Mountains">
+                    <div class="post-content">
+                        <h1>Second post with Image</h1>
+                        <p class="info">By John Doe, Jan 1 2021</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit repellendus facere
+                            excepturi porro, odit debitis recusandae accusantium temporibus omnis esse expedita odio
+                            aspernatur molestias, suscipit minima officiis. Exercitationem, est rerum.</p>
+                        <a href="#">
+                            <div class="button">Take a Tour</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <section class="secondary-content">
+                <h2>Secondary content here</h2>
+                <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="trees before a cliffside">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ducimus doloremque voluptatum amet,
+                    optio expedita voluptates aliquam, deserunt ab autem eius ut consectetur ad laudantium quaerat nihil
+                    voluptatibus distinctio. Doloribus!</p>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <ul class="footer-links">
+            <li><a href="#home">Facebook</a></li>
+            <li><a href="#about">Twitter</a></li>
+            <li><a href="#contact">Youtube</a></li>
+        </ul>
+        <p class="copyright">&copy; All rights reserved</p>
+    </footer>
+</body>
+
+</html>

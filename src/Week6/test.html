@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 6</title>
+
+    <style>
+        *,
+        ::after,
+        ::before {
+            box-sizing: inherit;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        :root {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /*Mobile View*/
+
+        .top-of-page {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            border-bottom: 2px solid darkgrey;
+        }
+
+        .top-of-page>h1 {
+            margin-left: 10px;
+        }
+
+        .top-of-page>.search-bar {
+            display: none;
+            background-color: lightgray;
+            color: darkgrey;
+            border-radius: 10px;
+            padding: 1rem 1rem;
+            text-align: center;
+            margin-right: 2%;
+            width: 20%;
+        }
+
+        .post {
+            margin-top: 1%;
+            padding: 10px;
+            /* Adds some space inside the border */
+            box-sizing: border-box;
+            border-bottom: 2px solid darkgrey;
+        }
+
+        .post>h1,
+        .post>.info {
+            color: gray;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+            /* Ensures no extra space around the image */
+            border-radius: 10px;
+        }
+
+        footer {
+            color: white;
+            background-color: rgb(85, 85, 94);
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer ul li {
+            margin-right: 20px;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links {
+            display: none;
+        }
+
+        .copyright {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        nav {
+            display: none;
+        }
+
+        /*Desktop View */
+        @media all and (min-width: 500px) {
+            .top-of-page {
+                border-bottom: none;
+            }
+
+            .top-of-page>.search-bar {
+                display: block;
+            }
+
+            .posts-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+
+            .post {
+                width: 45%;
+                /* Adjust width as needed */
+            }
+
+            .secondary-content {
+                width: 50%;
+                /* Adjust width as needed */
+                background-color: gray;
+                border-radius: 10px;
+                padding: 20px;
+            }
+
+            .secondary-content p {
+                color: white;
+            }
+        }
+
+        .top-of-page {
+            border-bottom: none;
+        }
+
+        .top-of-page>.search-bar {
+            display: block;
+        }
+
+        nav {
+            background-color: gray;
+            width: 100%;
+            color: orange;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            /* Center the child elements horizontally */
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        nav li {
+            padding: 10px
+        }
+
+        footer {
+            justify-content: space-between;
+        }
+
+        .footer-links {
+            display: flex;
+        }
+
+        .copyright {
+            margin-left: auto;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="top-of-page">
+        <h1>Alexander Stapp</h1>
+        <div class="search-bar">
+            Type to search
+        </div>
+    </section>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Recent Posts</li>
+            <li>Old Posts</li>
+            <li>Contact Us</li>
+            <li>About Us</li>
+        </ul>
+    </nav>
+    <div class="posts-container">
+        <div class="post">
+            <img src="https://images.unsplash.com/photo-1718086436850-ac77db40dadb?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Seaside Cliff">
+            <h1>First post with Image</h1>
+            <p class="info">By Adam Smith, Jan 1 2021</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit repellendus facere excepturi porro,
+                odit debitis recusandae accusantium temporibus omnis esse expedita odio aspernatur molestias, suscipit
+                minima officiis. Exercitationem, est rerum.</p>
+        </div>
+        <div class="post">
+            <img src="https://images.unsplash.com/photo-1718009963338-0a58665968aa?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Desert Mountains">
+            <h1>Second post with Image</h1>
+            <p class="info">By Adam Smith, Jan 1 2021</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit repellendus facere excepturi porro,
+                odit debitis recusandae accusantium temporibus omnis esse expedita odio aspernatur molestias, suscipit
+                minima officiis. Exercitationem, est rerum.</p>
+        </div>
+        <section class="secondary-content">
+            <p>This is the secondary content.</p>
+            <p>It should be positioned to the right of the posts and have a rounded border and gray background.</p>
+        </section>
+    </div>
+
+    <footer>
+        <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class="copyright">&copy; All rights reserved</p>
+    </footer>
+</body>
+
+</html>
