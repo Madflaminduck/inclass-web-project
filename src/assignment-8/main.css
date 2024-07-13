@@ -1,0 +1,49 @@
+/* Your styles go here */
+@import url("bootstrap/dist/css/bootstrap.min.css");
+@import url("bootstrap-icons/font/bootstrap-icons.css");
+
+
+/* Add any additional CSS here */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .img-thumbnail {
+    margin-bottom: 10px;
+    border-radius: 0;
+  }
+  
+  .card {
+    border: none;
+  }
+  
+  .card-img-top {
+    border-radius: 0;
+  }
+  
+  .card-body {
+    background-color: #fff;
+    padding: 10px;
+    border-top: none;
+  }
+  
+  .card-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .header-section {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5%;
+  }
+  
+  .gallery-text {
+    color: blue;
+    font-size: 1.5em;
+    padding-left: 2%;  
+}
