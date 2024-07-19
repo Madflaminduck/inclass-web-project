@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Project Starter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="Assingment 9" />
+
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <!-- Your HTML goes here -->
+
+    <div class="container">
+      <header>
+          <h1> Guest<i class="bi bi-book-half"></i> Book</h1>
+      </header>
+      <form id="userForm">
+          <label for="firstName"><strong>Guest's first name</strong></label>
+          <input type="text" id="firstName" placeholder="First name goes here">
+          <label for="lastName"><strong>Guest's last name</strong></label>
+          <input type="text" id="lastName" placeholder="Last name goes here">
+          <div class="button-group">
+              <button type="submit" id="submitButton">Add a guest</button>
+              <button type="button" id="cancelButton">Reset</button>
+          </div>
+          <button type="button" id="clearAllButton">Clear all</button>
+      </form>
+
+      <h1>Registered guests</h1>
+      <table id="userTable">
+          <thead>
+              <tr>
+                  <th>First name</th>
+                  <th>Last name</th>
+              </tr>
+          </thead>
+          <tbody>
+          </tbody>
+      </table>
+  </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
